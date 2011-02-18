@@ -43,4 +43,4 @@ How to use
        });  
    });
 
-Note: This plugin is part of (PowerTools)[http://cpojer.net/PowerTools/]
+Note: This plugin is part of [PowerTools](http://cpojer.net/PowerTools/)
