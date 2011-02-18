@@ -7,26 +7,25 @@ Loads more content when a user reaches the end of a page. Fires an event when th
 
 First you must to include the JS file in the head of your HTML document.
 
-   #HEAD
-   <script type="text/javascript" src="mootools-core.js"></script>
-   <script type="text/javascript" src="Class.Binds.js"></script>
-   <script type="text/javascript" src="ScrollLoader.js"></script>
+          #HEAD
+          <script type="text/javascript" src="mootools-core.js"></script>
+          <script type="text/javascript" src="Class.Binds.js"></script>
+          <script type="text/javascript" src="ScrollLoader.js"></script>
 
 How to use
 ----------
  
-   #JS
-   //when the DOM is ready then begin
-   window.addEvent('domready', function(){
-       var page = 2, url = "more-tweets.php";
-       new ScrollLoader({
-             onScroll: function() {
-                   var self = this;
-                   $('content_tweets').adopt(new Element('img',{src: 'ajax-loader.gif', id: 'loader'}));
-                   self.detach();
-                  (function() {
-                      //let's make a request for additional content
-                      new Request.HTML({url: url,
+          #JS
+          window.addEvent('domready', function(){
+              var page = 2, url = "more-tweets.php";
+              new ScrollLoader({
+                  onScroll: function() {
+                     var self = this;
+                     $('content_tweets').adopt(new Element('img',{src: 'ajax-loader.gif', id: 'loader'}));
+                     self.detach();
+                    (function() {
+                        //let's make a request for additional content
+                        new Request.HTML({url: url,
                            onSuccess: function(responseTree, responseElements, responseHTML, reponseJavaScript) {
                                  $('loader').destroy();
                                  if(responseHTML == 'No found results.') {
@@ -37,10 +36,13 @@ How to use
                                  self.attach();
                                  page++;
                             }
-                      }).get({'page': page, 'amount': "14",'username': "mootools"});
-                  }).delay(1000);                            
-             }
-       });  
-   });
+                        }).get({'page': page, 'amount': "14",'username': "mootools"});
+                    }).delay(1000);                            
+                  }
+              });  
+          });
 
-Note: This plugin is part of [PowerTools](http://cpojer.net/PowerTools/)
+Note: 
+-----
+
+This plugin is part of [PowerTools](http://cpojer.net/PowerTools/)
