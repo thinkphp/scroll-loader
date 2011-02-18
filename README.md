@@ -46,3 +46,12 @@ Note:
 -----
 
 This plugin is part of [PowerTools](http://cpojer.net/PowerTools/)
+
+Demos:
+------
+
+You can view in action:
+
+[http://thinkphp.github.com/scroll-loader/](http://thinkphp.github.com/scroll-loader/)
+[http://thinkphp.ro/apps/js-hacks/scroll-loader/demos/test-twitter-client/](http://thinkphp.ro/apps/js-hacks/scroll-loader/demos/test-twitter-client/)
+[http://thinkphp.ro/apps/js-hacks/scroll-loader/demos/test-twitter-search/](http://thinkphp.ro/apps/js-hacks/scroll-loader/demos/test-twitter-search/)
