@@ -7,17 +7,17 @@ Loads more content when a user reaches the end of a page. Fires an event when th
 
 First you must to include the JS file in the head of your HTML document.
 
-  #HEAD
-  <script type="text/javascript" src="mootools-core.js"></script>
-  <script type="text/javascript" src="Class.Binds.js"></script>
-  <script type="text/javascript" src="ScrollLoader.js"></script>
+   #HEAD
+   <script type="text/javascript" src="mootools-core.js"></script>
+   <script type="text/javascript" src="Class.Binds.js"></script>
+   <script type="text/javascript" src="ScrollLoader.js"></script>
 
 How to use
 ----------
  
-  #JS
-  //when the DOM is ready then begin
-  window.addEvent('domready', function(){
+   #JS
+   //when the DOM is ready then begin
+   window.addEvent('domready', function(){
        var page = 2, url = "more-tweets.php";
        new ScrollLoader({
              onScroll: function() {
@@ -41,4 +41,6 @@ How to use
                   }).delay(1000);                            
              }
        });  
-  });
+   });
+
+Note: This plugin is part of (PowerTools][http://cpojer.net/PowerTools/]
